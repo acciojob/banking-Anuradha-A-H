@@ -50,8 +50,8 @@ public class SavingsAccount extends BankAccount{
         // Return the final amount considering that bank gives compound interest on current amount given times per year
         double principal = getBalance();
         double n = times; // Compounded 'times' times per year
-        double A = principal * Math.pow(1 + rate / n, n * years);
-        return A - principal;
+        double A = principal * (Math.pow((1 + (rate / n)), n * years));
+        return A;
     }
 
 
