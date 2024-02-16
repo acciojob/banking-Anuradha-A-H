@@ -39,7 +39,10 @@ public class SavingsAccount extends BankAccount{
         // Return the final amount considering that bank gives simple interest on current amount
 
         double principle = getBalance();
-        return principle * years * rate;
+        double totalpercentofInterest = years * rate;
+        double totalamount = principle +((totalpercentofInterest * principle)/100);
+
+        return totalamount ;
 
     }
 
